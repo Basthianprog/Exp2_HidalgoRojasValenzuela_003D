@@ -7,6 +7,29 @@
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
         <link rel="icon" type="image/png" href="img/icono.jpg" />
+        <!--Libreria Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--SCRIPT-->
+        <script type="text/javascript">
+          $(document).ready(function()
+          {
+              $("#solicitar").click(function(){
+  
+                  $.get("https://mindicador.cl/api",
+                      function(data){
+                          
+                          $.each(data,function(i,item){
+                              $("#monedas").append("<tr><td>"+item.codigo+"</td><td>"+item.nombre +
+                              "</td><td>"+ item.valor+ "</td><td>" + item.fecha + "</td></tr>");
+                              
+  
+                          });
+  
+                      });
+              });
+          })
+      </script>
+
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <!-- Google Fonts -->
@@ -100,8 +123,42 @@
               Nuestros productos son 100% compostables, por su procedencia natural. Lo que los hace una buena opción para reciclaje y una desecho amigable para el medio ambiente
               </h5>
             <a href="QuienesSomos.html" class="btn btn-primary btn-lg">Más Información</a>       
+          </div><br><br>
+          <style>
+            #caja{
+              margin-left:40px;
+            }
+          </style>
+          <div class="container">
+            <div class="jumbotron">
+            <h3>Monedas importantes en pesos chilenos</h3>
+            <h5 onmouseover="style.color = 'black'" onmouseout="style.color= 'green'">Muchas gracias por visitarnos, si es que no eres de Chile y te interesa
+              coordinar una compra internacional ese servicio aún no está disponible desde nuestra página web, pero pronto lo estará,
+              aun así, podemos coordinar una venta internacional si nos hablas directamente al WhatsApp. Te dejamos una conversión de las monedas más importantes
+              a pesos chilenos para que tengas una referencia. Muchas gracias por tu aporte al medio ambiente.
+            </h5>
+            <div id="caja">
+              <button type="button" id="solicitar">Solicitar tipo de monedas</button>
+            </div>
+            <br><br>
+    
+            <table class="table" id="monedas">
+              <thead>
+                <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col">Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+    
+              </tbody>
+            </table>
           </div>
-        
+          </div>
+
+</body>
         
         
         <!--Copyright-->
