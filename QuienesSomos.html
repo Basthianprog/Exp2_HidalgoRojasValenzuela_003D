@@ -30,51 +30,69 @@
         
           <!-- enlaces -->
           <div class="collapse navbar-collapse" id="opciones">   
-              <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link" href="Paginaprincipal.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="Productos.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="QuienesSomos.html">Sobre nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Registro.html">Registro</a>  
-             <li class="nav-item">
-                <a class="nav-link" href="Despacho.html">Despacho</a>
-              </li>          
-              </ul>
-   
-          </div>
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="Paginaprincipal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="QuienesSomos.html">Sobre nosotros</a>
+            </li>           
+            <li class="nav-item">
+              <a class="nav-link" href="Registro.html">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Despacho.html">Despacho</a>
+        </li>
+            </ul>
+        </div>
       </nav>
           <div class="container">
             <h1>Quienes somos</h1>
           </div>
         <div class="container-fluid p-3">
           
-          <div class="container p-3 my-3 bg-info" >
+          <div class="container p-5 my-3 bg-info" >
             
             <div class="container p-3 my-3 bg-light">
-                <p>Somos un grupo de personas motivadas por la idea de ayudar al medio ambiente ya que como todos sabemos, el planeta está sufriendo por culpa del ser humano gracias a toda la contaminación emitida. Por lo que decidimos hacer un cambio, poquito a poquito se hace un muchito.</p>
+                  <!--Evento-->
+                <h4 onmouseover="style.color = 'black'" onmouseout="style.color= 'green'">Somos un grupo de personas motivadas por la idea de ayudar al medio ambiente ya que como todos sabemos, el planeta está sufriendo por culpa del ser humano gracias a toda la contaminación emitida. Por lo que decidimos hacer un cambio, poquito a poquito se hace un muchito.</p>
                 
-                <p>El nombre GreenPanda nace de la idea del bambú, como la dieta del panda es a base de este, nos decidimos a colocarle así. Y Green es por “verde” en inglés, que es asociado a la naturaleza.</p>
-                
-                <p>Elegimos vender estos productos ya que son biodegradables y esto nos ayuda con nuestra propuesta de ayudar al medio ambiente.</p>
+                El nombre GreenPanda nace de la idea del bambú, como la dieta del panda es a base de este, nos decidimos a colocarle así. Y Green es por “verde” en inglés, que es asociado a la naturaleza.</p>
+                  
+                Elegimos vender estos productos ya que son biodegradables y esto nos ayuda con nuestra propuesta de ayudar al medio ambiente.
+              </h4>
                 
             </div>
-            <img src="img/salvar2.png" class="img-fluid" >   
+            <img src="img/salvar2.png" class="img-fluid" width="700px" height="700px" >   
             <img src="img/salvar.png" class="img-fluid" width="300px" height="300px" >
             <br><br>
-            <a href="https://youtu.be/UEkh47qyk6k" target="_blank" style="color: black" >La importancia de cuidar el medio ambiente </a>
+            
+            <div class="dropdown">
+              <button id="myBtn" class="dropbtn">La importancia de cuidar el medio ambiente </button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="https://youtu.be/UEkh47qyk6k" target="_blank">Video</a>
+                
+              </div>
             </div>
+            </div>
+            </div>
+            
           
             <!--Copyright-->
         <div class="copyright py-4 text-center text-white">
           <div class="container"><small>Copyright © GreenPanda 2021</small></div>
         </div>
           <!--Script-->
+          <script>
+            document.getElementById("myBtn").onclick = function() {myFunction()};
+            
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            </script>
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
